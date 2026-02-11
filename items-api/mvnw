@@ -1,0 +1,9 @@
+#!/bin/sh
+# Maven Wrapper - Use 'mvn spring-boot:run' if you have Maven installed
+# To generate the full wrapper, run: mvn -N wrapper:wrapper
+if command -v mvn >/dev/null 2>&1; then
+  exec mvn "$@"
+else
+  echo "Maven not found. Please install Maven (https://maven.apache.org) or run: brew install maven"
+  exit 1
+fi
